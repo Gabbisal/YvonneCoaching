@@ -4,35 +4,47 @@
   <meta charset="utf-8">
   <title>Kontakt | Yvonne Coaching</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Start</a> |
-      <a href="om.html">Om</a> |
-      <a href="tjanster.html">Tjänster</a> |
-      <a href="boka.html">Boka</a> |
-      <a href="kontakt.html">Kontakt</a>
+  <header class="header">
+    <nav class="nav">
+      <a class="brand" href="index.html">Yvonne Coaching</a>
+      <div class="menu">
+        <a href="index.html">Start</a>
+        <a href="om.html">Om</a>
+        <a href="tjanster.html">Tjänster</a>
+        <a href="boka.html">Boka</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <h1>Kontakt</h1>
-    <p>Hör gärna av dig om du har frågor eller vill veta mer.</p>
+  <main class="container">
+    <section class="hero">
+      <h1>Kontakt</h1>
+      <p class="lead">Hör gärna av dig om du har frågor eller vill veta mer.</p>
 
-    <h2>Kontaktuppgifter</h2>
-    <p>
-      Email: <a href="mailto:dinmamma@mail.se">dinmamma@mail.se</a><br>
-      Telefon: <a href="tel:+46700000000">+46 70 000 00 00</a>
-    </p>
+      <a class="btn" href="mailto:dinmamma@mail.se">Skicka mail</a>
+      <a class="btn secondary" href="tel:+46700000000" style="margin-left:8px;">Ring</a>
+    </section>
 
-    <h2>Skicka ett meddelande</h2>
-    <p>
-      (Detta formulär kan vi koppla “på riktigt” senare. Just nu kan du använda mail-länken ovan.)
-    </p>
+    <section class="section">
+      <h2 style="margin:0 0 8px;">Kontaktuppgifter</h2>
+      <p class="lead" style="margin:0;">
+        Email: <a href="mailto:dinmamma@mail.se">dinmamma@mail.se</a><br>
+        Telefon: <a href="tel:+46700000000">+46 70 000 00 00</a>
+      </p>
+      <p class="lead" style="margin-top:10px;">
+        (Säg till om du vill ha ett formulär som faktiskt skickar meddelanden — jag kan fixa det också.)
+      </p>
+    </section>
+  </main>
 
-    <form>
-      <label>
-        Namn<br>
-        <input typ
+  <footer class="footer">
+    <p>© 2026 Yvonne Coaching</p>
+  </footer>
+</body>
+
