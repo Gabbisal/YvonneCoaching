@@ -1,0 +1,129 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BAS */
+body {
+  font-family: "Georgia", serif;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #eee;
+  z-index: 100;
+}
+
+.nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-weight: bold;
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.menu a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+/* HERO */
+.hero {
+  min-height: 80vh;
+  background-image: url("assets/IMG_7785.jpeg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  padding: 4rem 2rem;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* KNAPPAR */
+.hero-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: #c7a46c;
+  color: #1a1a1a;
+}
+
+.btn.secondary {
+  border: 2px solid white;
+  color: white;
+}
+
+/* CONTENT */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #f7f5f2;
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: #f1f1f1;
+}
