@@ -4,41 +4,45 @@
   <meta charset="utf-8">
   <title>Boka | Yvonne Coaching</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Start</a> |
-      <a href="om.html">Om</a> |
-      <a href="tjanster.html">Tjänster</a> |
-      <a href="boka.html">Boka</a> |
-      <a href="kontakt.html">Kontakt</a>
+  <header class="header">
+    <nav class="nav">
+      <a class="brand" href="index.html">Yvonne Coaching</a>
+      <div class="menu">
+        <a href="index.html">Start</a>
+        <a href="om.html">Om</a>
+        <a href="tjanster.html">Tjänster</a>
+        <a href="boka.html">Boka</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <h1>Boka en tid</h1>
-    <p>Välj ett alternativ:</p>
+  <main class="container">
+    <section class="hero">
+      <h1>Boka en tid</h1>
+      <p class="lead">
+        Just nu kan du boka genom att maila eller ringa. (Sen kan vi bädda in Calendly/SimplyBook här.)
+      </p>
 
-    <ul>
-      <li><strong>Alternativ A:</strong> Boka via Calendly (rekommenderas)</li>
-      <li><strong>Alternativ B:</strong> Boka via SimplyBook</li>
-      <li><strong>Alternativ C:</strong> Boka via Google Kalender</li>
-    </ul>
+      <a class="btn" href="mailto:dinmamma@mail.se?subject=Bokning%20Yvonne%20Coaching">Maila för bokning</a>
+      <a class="btn secondary" href="tel:+46700000000" style="margin-left:8px;">Ring</a>
+    </section>
 
-    <p>
-      När du valt bokningssystem kan jag bädda in det här så att bokningen sker direkt på sidan.
-    </p>
-
-    <p>
-      Tills vidare: maila för bokning →
-      <a href="mailto:dinmamma@mail.se?subject=Bokning%20Yvonne%20Coaching">dinmamma@mail.se</a>
-    </p>
+    <section class="section">
+      <h2 style="margin:0 0 8px;">Nästa steg</h2>
+      <p class="lead" style="margin:0;">
+        Om du vill: skicka din bokningslänk (t.ex. Calendly) så bäddar jag in den så att bokningen sker direkt här på sidan.
+      </p>
+    </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <p>© 2026 Yvonne Coaching</p>
   </footer>
 </body>
-</html>
+
