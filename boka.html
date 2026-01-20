@@ -5,7 +5,6 @@
   <title>Boka | Yvonne Coaching</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -22,27 +21,55 @@
     </nav>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <h1>Boka en tid</h1>
-      <p class="lead">
-        Just nu kan du boka genom att maila eller ringa. (Sen kan vi bädda in Calendly/SimplyBook här.)
-      </p>
+  <main>
+    <!-- HERO med egen bild för boka-sidan -->
+    <section class="page-hero boka-hero">
+      <div class="hero-content">
+        <h1>Boka en tid</h1>
+        <p class="subtitle">Just nu kan du boka genom att maila eller ringa.</p>
 
-      <a class="btn" href="mailto:dinmamma@mail.se?subject=Bokning%20Yvonne%20Coaching">Maila för bokning</a>
-      <a class="btn secondary" href="tel:+46700000000" style="margin-left:8px;">Ring</a>
+        <div class="bubble-row">
+          <button class="bubble" type="button" onclick="toggleBox('mailBox')">Maila</button>
+          <button class="bubble" type="button" onclick="toggleBox('phoneBox')">Ring</button>
+        </div>
+
+        <div class="reveal-wrap">
+          <div id="mailBox" class="reveal">
+            Mail: <a href="mailto:dinmamma@mail.se?subject=Bokning%20Yvonne%20Coaching">dinmamma@mail.se</a>
+          </div>
+
+          <div id="phoneBox" class="reveal">
+            Telefon: <a href="tel:+46700000000">+46 70 000 00 00</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="section">
-      <h2 style="margin:0 0 8px;">Nästa steg</h2>
-      <p class="lead" style="margin:0;">
-        Om du vill: skicka din bokningslänk (t.ex. Calendly) så bäddar jag in den så att bokningen sker direkt här på sidan.
-      </p>
-    </section>
+    <div class="container">
+      <section class="section">
+        <h2 style="margin:0 0 8px;">Nästa steg</h2>
+        <p class="lead" style="margin:0;">
+          Om du vill: skicka din bokningslänk (t.ex. Calendly) så bäddar jag in den så att bokningen sker direkt här på sidan.
+        </p>
+      </section>
+    </div>
   </main>
 
   <footer class="footer">
     <p>© 2026 Yvonne Coaching</p>
   </footer>
-</body>
 
+  <script>
+    function toggleBox(id){
+      const mail = document.getElementById("mailBox");
+      const phone = document.getElementById("phoneBox");
+      const target = document.getElementById(id);
+
+      if(id === "mailBox") phone.classList.remove("show");
+      if(id === "phoneBox") mail.classList.remove("show");
+
+      target.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
