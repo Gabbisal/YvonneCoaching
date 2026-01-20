@@ -1,18 +1,25 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BAS */
+/* =========================
+   BAS
+========================= */
 body {
   font-family: "Georgia", serif;
   color: #1a1a1a;
   line-height: 1.6;
+  background: #fff;
 }
 
-/* HEADER */
+/* =========================
+   HEADER / NAV
+========================= */
 .header {
   position: sticky;
   top: 0;
@@ -42,7 +49,9 @@ body {
   color: #1a1a1a;
 }
 
-/* HERO */
+/* =========================
+   STARTSIDANS HERO (.hero)
+========================= */
 .hero {
   min-height: 80vh;
   background-image: url("assets/IMG_7785.jpeg");
@@ -77,11 +86,14 @@ body {
   margin-bottom: 1rem;
 }
 
-/* KNAPPAR */
+/* =========================
+   KNAPPAR
+========================= */
 .hero-buttons {
   margin-top: 2rem;
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -89,6 +101,7 @@ body {
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
+  display: inline-block;
 }
 
 .btn.primary {
@@ -101,14 +114,18 @@ body {
   color: white;
 }
 
-/* CONTENT */
+/* =========================
+   CONTENT
+========================= */
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 4rem 2rem;
 }
 
-/* GRID */
+/* =========================
+   GRID / CARDS
+========================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -121,57 +138,69 @@ body {
   border-radius: 16px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 .footer {
   text-align: center;
   padding: 2rem;
   background: #f1f1f1;
 }
-/* HERO för undersidor */
-.page-hero{
+
+/* =========================
+   HERO FÖR UNDERSIDOR (.page-hero)
+   OBS: Bilden sätts direkt på .om-hero / .boka-hero
+========================= */
+.page-hero {
   min-height: 72vh;
   position: relative;
   display: flex;
   align-items: center;
   padding: 4rem 2rem;
-}
 
-.page-hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
+  /* default om någon sida glömmer bild */
+  background-color: #333;
   background-size: cover;
   background-position: center;
 }
 
-.page-hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
+/* overlay */
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: rgba(0,0,0,0.45);
 }
 
-.page-hero .hero-content{
+.page-hero .hero-content {
   position: relative;
   z-index: 2;
   color: white;
   max-width: 800px;
 }
 
-/* BOKA-bild */
-.boka-hero::before{
+/* =========================
+   UNDERSIDOR: BAKGRUNDSBILDER
+========================= */
+.om-hero {
+  background-image: url("assets/om.jpg");
+}
+
+.boka-hero {
   background-image: url("assets/boka.jpg");
 }
 
-/* Vita bubblor */
-.bubble-row{
+/* =========================
+   BOKA: VITA BUBBLOR + REVEAL
+========================= */
+.bubble-row {
   display: flex;
   gap: 14px;
   margin-top: 22px;
   flex-wrap: wrap;
 }
 
-.bubble{
+.bubble {
   appearance: none;
   border: 2px solid rgba(255,255,255,0.9);
   background: rgba(255,255,255,0.15);
@@ -183,19 +212,19 @@ body {
   transition: transform .12s ease, background .12s ease;
 }
 
-.bubble:hover{
+.bubble:hover {
   transform: translateY(-1px);
   background: rgba(255,255,255,0.25);
 }
 
-.reveal-wrap{
+.reveal-wrap {
   margin-top: 14px;
   display: grid;
   gap: 10px;
   max-width: 420px;
 }
 
-.reveal{
+.reveal {
   display: none;
   background: rgba(255,255,255,0.95);
   color: #1a1a1a;
@@ -203,21 +232,19 @@ body {
   border-radius: 14px;
 }
 
-.reveal a{
+.reveal a {
   color: #1a1a1a;
   text-decoration: underline;
 }
 
-.reveal.show{
+.reveal.show {
   display: block;
 }
-/* OM-bild */
-.om-hero::before{
-  background-image: url("assets/om.jpg");
-}
 
-/* Vit bubbla som länk */
-.bubble-link{
+/* =========================
+   OM: VIT BUBBLA SOM LÄNK
+========================= */
+.bubble-link {
   display: inline-block;
   margin-top: 22px;
   padding: 12px 22px;
@@ -230,7 +257,7 @@ body {
   transition: transform .12s ease, background .12s ease;
 }
 
-.bubble-link:hover{
+.bubble-link:hover {
   transform: translateY(-1px);
   background: rgba(255,255,255,0.25);
 }
