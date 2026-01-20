@@ -211,3 +211,26 @@ body {
 .reveal.show{
   display: block;
 }
+/* OM-bild */
+.om-hero::before{
+  background-image: url("assets/om.jpg");
+}
+
+/* Vit bubbla som länk */
+.bubble-link{
+  display: inline-block;
+  margin-top: 22px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 2px solid rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.15);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform .12s ease, background .12s ease;
+}
+
+.bubble-link:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.25);
+}
