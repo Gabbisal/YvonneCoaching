@@ -127,3 +127,87 @@ body {
   padding: 2rem;
   background: #f1f1f1;
 }
+/* HERO för undersidor */
+.page-hero{
+  min-height: 72vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.page-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.45);
+}
+
+.page-hero .hero-content{
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 800px;
+}
+
+/* BOKA-bild */
+.boka-hero::before{
+  background-image: url("assets/boka.jpg");
+}
+
+/* Vita bubblor */
+.bubble-row{
+  display: flex;
+  gap: 14px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+.bubble{
+  appearance: none;
+  border: 2px solid rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.15);
+  color: white;
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform .12s ease, background .12s ease;
+}
+
+.bubble:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.25);
+}
+
+.reveal-wrap{
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+  max-width: 420px;
+}
+
+.reveal{
+  display: none;
+  background: rgba(255,255,255,0.95);
+  color: #1a1a1a;
+  padding: 12px 14px;
+  border-radius: 14px;
+}
+
+.reveal a{
+  color: #1a1a1a;
+  text-decoration: underline;
+}
+
+.reveal.show{
+  display: block;
+}
