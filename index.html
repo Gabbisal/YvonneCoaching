@@ -5,32 +5,57 @@ index.html
   <meta charset="utf-8">
   <title>Yvonne Coaching</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Start</a> |
-      <a href="om.html">Om</a> |
-      <a href="tjanster.html">Tjänster</a> |
-      <a href="boka.html">Boka</a> |
-      <a href="kontakt.html">Kontakt</a>
+  <header class="header">
+    <nav class="nav">
+      <a class="brand" href="index.html">Yvonne Coaching</a>
+
+      <div class="menu">
+        <a href="index.html">Start</a>
+        <a href="om.html">Om</a>
+        <a href="tjanster.html">Tjänster</a>
+        <a href="boka.html">Boka</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <h1>Yvonne Coaching</h1>
-    <p>Life coaching and consultations</p>
+  <main class="container">
+    <section class="hero">
+      <h1>Yvonne Coaching</h1>
+      <p class="lead">Life coaching and consultations</p>
+      <p class="lead">
+        Välkommen! Jag hjälper dig att skapa klarhet, balans och riktning i livet.
+      </p>
 
-    <p>
-      Välkommen! Jag hjälper dig att skapa klarhet, balans och riktning i livet.
-    </p>
+      <a class="btn" href="boka.html">Boka en session</a>
+      <a class="btn secondary" href="tjanster.html" style="margin-left:8px;">
+        Se tjänster
+      </a>
+    </section>
 
-    <a href="boka.html">👉 Boka en session</a>
+    <section class="grid">
+      <article class="card">
+        <h3>Klarhet</h3>
+        <p>Hitta riktning och vad som faktiskt är viktigt för dig.</p>
+      </article>
+
+      <article class="card">
+        <h3>Balans</h3>
+        <p>Skapa vanor och gränser som håller – på riktigt.</p>
+      </article>
+
+      <article class="card">
+        <h3>Trygghet</h3>
+        <p>Bygg självförtroende och mod att ta nästa steg.</p>
+      </article>
+    </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <p>© 2026 Yvonne Coaching</p>
   </footer>
 </body>
-</html>
