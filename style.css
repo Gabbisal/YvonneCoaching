@@ -261,3 +261,78 @@ body {
   transform: translateY(-1px);
   background: rgba(255,255,255,0.25);
 }
+
+/* =========================
+   SCROLL ANIMATIONER
+========================= */
+/* Smooth scroll beteende */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Keyframes för fade-in och slide-up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Element som ska animeras startar dolda */
+.animate-on-scroll {
+  opacity: 0;
+}
+
+/* När element kommer in i vy */
+.animate-on-scroll.animate-in {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Staggered animations för flera element */
+.animate-on-scroll.animate-in:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.animate-on-scroll.animate-in:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.animate-on-scroll.animate-in:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.animate-on-scroll.animate-in:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Hero-innehåll animation */
+.hero-content.animate-hero {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+/* Reducera animationer för användare som föredrar det */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-on-scroll,
+  .animate-on-scroll.animate-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
