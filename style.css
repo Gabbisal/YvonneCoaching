@@ -195,11 +195,26 @@ body {
   max-width: 800px;
 }
 
+.page-hero .hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .page-hero .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
 /* =========================
    UNDERSIDOR: BAKGRUNDSBILDER
 ========================= */
 .om-hero {
   background-image: url("assets/om.jpg");
+}
+
+.tjanster-hero {
+  background-image: url("assets/tjanster.jpg");
 }
 
 .boka-hero {
